@@ -1,0 +1,20 @@
+{
+  "name": "personal-research",
+  "interface": {
+    "displayName": "個人用リサーチ"
+  },
+  "plugins": [
+    {
+      "name": "research-workflow",
+      "source": {
+        "source": "local",
+        "path": "./plugins/research-workflow"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
