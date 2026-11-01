@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "research-workflow",
+  "version": "1.0.0",
+  "description": "小規模なのに反応が大きいコンテンツを調査し、伸びる理由と共通ニーズを分析するリサーチスキル。",
+  "keywords": ["research", "content", "trends"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "リサーチ",
+        "shortDescription": "小規模でも伸びたコンテンツから需要と勝ち筋を発見",
+        "longDescription": "YouTube、X、Instagram、Web記事を調査し、反応とアカウント規模を比較しながら、伸びた理由、共通ニーズ、未充足の切り口を整理します。",
+        "developerName": "Personal",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
+        "defaultPrompt": ["$research を使って、このテーマで伸びているコンテンツを調査してください。"],
+        "brandColor": "#2563EB"
+      }
+    }
+  }
+}
