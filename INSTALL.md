@@ -1,30 +1,29 @@
 # `$research` を別のデバイスで使う
 
-このフォルダは、Codex用の個人マーケットプレイスとしてそのまま使えます。
+このリポジトリは、Codex用の個人マーケットプレイスとしてそのまま使えます。
 
-## 方法A：非公開GitHubで同期する
+## 新しいデバイスに追加する
 
-1. このフォルダの中身を、非公開のGitHubリポジトリへアップロードします。
-2. 新しいデバイスのCodexで、次を実行します。
+1. 新しいデバイスのCodexで、次を実行します。
 
    ```text
-   codex plugin marketplace add <GitHubのユーザー名>/<リポジトリ名>
+   codex plugin marketplace add kakoike/codex-research-skill
    ```
 
-3. CodexまたはChatGPTデスクトップアプリを再起動します。
-4. Plugins画面で「個人用リサーチ」を開き、「リサーチ」をインストールします。
-5. 新しいチャットで `$research` を呼び出します。
+2. CodexまたはChatGPTデスクトップアプリを再起動します。
+3. Plugins画面で「個人用リサーチ」を開き、「リサーチ」をインストールします。
+4. 新しいチャットで `$research` を呼び出します。
 
-スキルを更新した後は、GitHubへ変更を反映し、各デバイスで次を実行します。
+スキルを更新した後は、各デバイスで次を実行します。
 
 ```text
 codex plugin marketplace upgrade personal-research
 ```
 
-## 方法B：ZIPを手動で渡す
+## ZIPで手動移行する場合
 
-1. ZIPを新しいデバイスへコピーして展開します。
-2. 展開したフォルダを指定して、次を実行します。
+1. リポジトリまたは移行用ZIPを新しいデバイスへコピーして展開します。
+2. 展開したフォルダを指定します。
 
    ```text
    codex plugin marketplace add /展開したフォルダの絶対パス
@@ -34,6 +33,6 @@ codex plugin marketplace upgrade personal-research
 
 ## 注意
 
-- GitHubへ置く場合は、個人用途なら非公開リポジトリにしてください。
-- このパッケージには認証情報やAPIキーは含まれていません。
+- このリポジトリは非公開です。別デバイスでも同じGitHubアカウントで認証してください。
+- 認証情報やAPIキーは含まれていません。
 - Codexの対応状況によって、CLIではなくデスクトップアプリのPlugins画面から追加・インストールする場合があります。
