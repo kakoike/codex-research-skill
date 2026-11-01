@@ -1,0 +1,4 @@
+interface:
+  display_name: "コンテンツトレンド調査"
+  short_description: "小規模なのに伸びたコンテンツから需要と勝ち筋を発見"
+  default_prompt: "$research を使って、このテーマで伸びているコンテンツを調査してください。"
