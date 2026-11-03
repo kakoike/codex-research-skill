@@ -1,38 +1,47 @@
-# `$research` を別のデバイスで使う
+# `$research` をすべてのPCで使う
 
-このリポジトリは、Codex用の個人マーケットプレイスとしてそのまま使えます。
+MacとWindowsのCodexで同じ `$research` を使えます。新しいPCでは、最初に1回だけインストールしてください。
 
-## 新しいデバイスに追加する
+## Mac
 
-1. 新しいデバイスのCodexで、次を実行します。
+1. このリポジトリをZIPでダウンロードし、展開します。
+2. `install-mac.sh` を開きます。開けない場合はターミナルで次を実行します。
 
-   ```text
-   codex plugin marketplace add kakoike/codex-research-skill
+   ```bash
+   bash install-mac.sh
    ```
 
-2. CodexまたはChatGPTデスクトップアプリを再起動します。
-3. Plugins画面で「個人用リサーチ」を開き、「リサーチ」をインストールします。
-4. 新しいチャットで `$research` を呼び出します。
+## Windows
 
-スキルを更新した後は、各デバイスで次を実行します。
+1. このリポジトリをZIPでダウンロードし、展開します。
+2. `install-windows.ps1` を右クリックし、「PowerShellで実行」を選びます。
+3. 実行が制限された場合は、展開したフォルダでPowerShellを開いて次を実行します。
+
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File .\install-windows.ps1
+   ```
+
+## インストール後
+
+1. CodexまたはChatGPTデスクトップアプリを再起動します。
+2. 新しいチャットで `$research` を呼び出します。
+
+スキルを更新する場合は、各PCで次を実行します。
 
 ```text
 codex plugin marketplace upgrade personal-research
 ```
 
-## ZIPで手動移行する場合
+## インストーラーを使わない場合
 
-1. リポジトリまたは移行用ZIPを新しいデバイスへコピーして展開します。
-2. 展開したフォルダを指定します。
+Codexのターミナルで次の2行を実行します。
 
-   ```text
-   codex plugin marketplace add /展開したフォルダの絶対パス
-   ```
-
-3. アプリを再起動し、Plugins画面から「リサーチ」をインストールします。
+```text
+codex plugin marketplace add kakoike/codex-research-skill
+codex plugin add research-workflow@personal-research
+```
 
 ## 注意
 
-- このリポジトリは非公開です。別デバイスでも同じGitHubアカウントで認証してください。
-- 認証情報やAPIキーは含まれていません。
-- Codexの対応状況によって、CLIではなくデスクトップアプリのPlugins画面から追加・インストールする場合があります。
+- このパッケージには認証情報やAPIキーは含まれていません。
+- スマートフォンやタブレットでは、Codexを直接選択できません。対象はMacとWindowsのPCです。
