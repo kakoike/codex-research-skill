@@ -1,9 +1,10 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "research-workflow",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "小規模なのに反応が大きいコンテンツを調査し、伸びる理由と共通ニーズを分析するリサーチスキル。",
   "keywords": ["research", "content", "trends"],
+  "repository": "https://github.com/kakoike/codex-research-skill",
   "extensions": {
     "com.openai": {
       "interface": {
@@ -13,7 +14,9 @@
         "developerName": "Personal",
         "category": "Productivity",
         "capabilities": ["Read", "Write"],
-        "defaultPrompt": ["$research を使って、このテーマで伸びているコンテンツを調査してください。"],
+        "defaultPrompt": [
+          "$research を使って、このテーマで伸びているコンテンツを調査してください。"
+        ],
         "brandColor": "#2563EB"
       }
     }
